@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR 슈퍼 스포츠 챔피언</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- 폰트 추가 -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">VR SUPER SPORTS</div>
+        <nav>
+            <a href="#">홈</a>
+            <a href="#features">스포츠 종목</a>
+            <a href="#how-to">이용 방법</a>
+            <a href="design.html">기획서</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>거실에서 탄생하는<br>슈퍼 스포츠 챔피언!</h1>
+        <p>파이어 샷 테니스부터 판타지 볼링까지.<br>가족 모두가 즐기는 물리 기반 리얼 액션 스포츠.</p>
+        <button class="btn" id="startBtn">무료 체험 시작하기</button>
+    </section>
+
+    <div id="features">
+        <!-- 파워 테니스 섹션 -->
+        <section class="game-section tennis-section">
+            <div class="game-visual">
+                <img src="asset/테니스.jpg" alt="파워 테니스 게임 장면">
+            </div>
+            <div class="game-text">
+                <h2 class="game-title">파워 테니스 <span class="sub-title">Power Tennis</span></h2>
+                <p class="game-desc">단순히 공을 넘기는 게 아닙니다. 정확한 타이밍에 휘둘러 '스매시'를 날리세요!</p>
+                <ul class="game-features">
+                    <li><strong>🔥 파이어 샷:</strong> 연속 3번 성공 시 라켓에 불이 붙어 강력한 샷을 날립니다.</li>
+                    <li><strong>🎾 물리 엔진:</strong> 컨트롤러의 속도와 각도가 공의 궤적을 리얼하게 결정합니다.</li>
+                    <li><strong>🤖 AI 대전:</strong> 슬라이스, 로브 등 다양한 마구를 구사하는 AI에 도전하세요.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 매직 볼링 섹션 -->
+        <section class="game-section bowling-section">
+            <div class="game-visual">
+                <img src="asset/볼링.jpg" alt="매직 볼링 게임 장면">
+            </div>
+            <div class="game-text">
+                <h2 class="game-title">매직 볼링 <span class="sub-title">Magic Bowling</span></h2>
+                <p class="game-desc">평범한 볼링은 가라! 레인 위에 장애물이 나타나는 판타지 볼링.</p>
+                <ul class="game-features">
+                    <li><strong>🔮 스핀 컨트롤:</strong> 손목을 비틀어 공에 마법 같은 회전을 거세요.</li>
+                    <li><strong>🚧 장애물 모드:</strong> 움직이는 구멍과 장애물을 피해 스트라이크를 노리세요.</li>
+                    <li><strong>💥 폭발 연출:</strong> 핀이 하늘로 날아가는 시원한 타격감을 선사합니다.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 네온 검술 섹션 -->
+        <section class="game-section chambara-section">
+            <div class="game-visual">
+                <img src="asset/검술.jpg" alt="네온 검술 게임 장면">
+            </div>
+            <div class="game-text">
+                <h2 class="game-title">네온 검술 <span class="sub-title">Neon Chambara</span></h2>
+                <p class="game-desc">빛나는 검으로 펼치는 1:1 진검승부. 상대를 벼랑 끝으로 밀어내세요.</p>
+                <ul class="game-features">
+                    <li><strong>🛡️ 가드 & 카운터:</strong> 상대의 공격 방향을 읽고 막아낸 뒤 반격하세요.</li>
+                    <li><strong>🌀 필살기:</strong> 게이지를 모아 '회오리 베기'로 일발 역전을 노리세요.</li>
+                    <li><strong>🌊 링 아웃:</strong> 상대를 경기장 밖 물 위나 낭떠러지로 떨어뜨리면 승리!</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- 이용 방법 섹션 추가 -->
+    <section id="how-to" class="how-to-play">
+        <h2 class="section-title">챔피언이 되는 방법</h2>
+        <div class="steps-container">
+            <div class="step-item">
+                <div class="step-icon">👋</div>
+                <h3>리얼한 손맛</h3>
+                <p>휘두르고 던지는 물리 기반 조작! 타격 순간 느껴지는 진동과 화면 흔들림을 경험하세요.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-icon">🏆</div>
+                <h3>가족 랭킹전</h3>
+                <p>게임이 끝나면 스코어보드에 점수가 기록됩니다. 오늘의 우리 집 1등은 누구?</p>
+            </div>
+            <div class="step-item">
+                <div class="step-icon">✨</div>
+                <h3>화려한 이펙트</h3>
+                <p>스트라이크 폭발, 불타는 라켓! 시각적 쾌감을 극대화한 파티클 효과를 즐기세요.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 리뷰 섹션 추가 -->
+    <section class="reviews">
+        <h2 class="section-title">유저들의 생생 후기</h2>
+        <div class="review-container">
+            <div class="review-card">
+                <p class="review-text">"테니스 치다가 라켓에 불붙을 때 타격감이 미쳤어요! 아이들이랑 땀 흘리며 놀기 딱 좋습니다."</p>
+                <p class="review-author">- 김철수 님 (40대, 아빠)</p>
+            </div>
+            <div class="review-card">
+                <p class="review-text">"검술 게임에서 친구를 링 밖으로 밀어낼 때 쾌감이 장난 아니에요. 회오리 베기 최고!"</p>
+                <p class="review-author">- 이영희 님 (20대, 대학생)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 VR Super Sports Champion. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">이용약관</a> | <a href="#">개인정보처리방침</a> | <a href="#">고객센터</a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

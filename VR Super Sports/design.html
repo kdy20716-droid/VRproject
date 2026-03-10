@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기획서 - VR 슈퍼 스포츠 챔피언</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 기획서 페이지 전용 스타일 */
+        body {
+            background-color: #f8f9fa;
+        }
+        .design-container {
+            max-width: 900px;
+            margin: 120px auto 80px;
+            padding: 60px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+        .doc-title {
+            font-size: 2.5rem;
+            color: #2d3436;
+            border-bottom: 3px solid #ff4757;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            font-weight: 800;
+        }
+        .doc-section {
+            margin-bottom: 50px;
+        }
+        .doc-section h2 {
+            font-size: 1.8rem;
+            color: #2f3542;
+            margin-bottom: 20px;
+            border-left: 5px solid #ffa502;
+            padding-left: 15px;
+        }
+        .doc-section h3 {
+            font-size: 1.3rem;
+            color: #57606f;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .doc-section ul {
+            list-style-type: disc;
+            padding-left: 25px;
+            color: #636e72;
+        }
+        .doc-section li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: white;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .bg-red { background-color: #ff6b6b; }
+        .bg-blue { background-color: #70a1ff; }
+        .bg-green { background-color: #2ed573; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">VR SUPER SPORTS</div>
+        <nav>
+            <a href="main.html">홈</a>
+            <a href="main.html#features">스포츠 종목</a>
+            <a href="main.html#how-to">이용 방법</a>
+            <a href="design.html" style="color: #ff4757;">기획서</a>
+        </nav>
+    </header>
+
+    <div class="design-container">
+        <h1 class="doc-title">프로젝트 기획서: VR 슈퍼 스포츠 챔피언</h1>
+
+        <div class="doc-section">
+            <h2>1. 핵심 루프 (Core Loop)</h2>
+            <p>플레이어는 로비에서 스포츠를 선택하고, 신체 활동을 통해 게임을 진행하며, 결과에 따라 보상을 얻거나 랭킹을 갱신하는 순환 구조를 가집니다.</p>
+            <ul>
+                <li><strong>Lobby (준비):</strong> 게임 모드 선택, 장비 커스터마이징, 튜토리얼 확인.</li>
+                <li><strong>Action (플레이):</strong> 물리 기반의 직관적인 스포츠 플레이 (휘두르기, 던지기, 막기).</li>
+                <li><strong>Feedback (보상):</strong> 타격감(진동, 파티클)과 점수 획득을 통한 즉각적인 피드백.</li>
+                <li><strong>Result (결과):</strong> 로컬 랭킹 갱신 및 가족 간 경쟁 유도.</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>2. 콘텐츠 상세 명세 (Content Specifications)</h2>
+            
+            <h3>2.1 공통 시스템 (Base System)</h3>
+            <ul>
+                <li><strong>조작:</strong> 6DoF 컨트롤러 추적을 통한 스윙 속도 및 각도 계산.</li>
+                <li><strong>물리:</strong> Unity PhysX 기반의 공/물체 충돌 및 반발력 시뮬레이션.</li>
+                <li><strong>멀미 저감:</strong> 이동 최소화(Room Scale), 급격한 카메라 회전 제한.</li>
+            </ul>
+
+            <h3>2.2 미니게임: 파워 테니스 (Power Tennis) <span class="badge bg-red">Action</span></h3>
+            <p><strong>컨셉:</strong> 정확한 타이밍에 휘둘러 '스매시'를 날리는 액션 테니스.</p>
+            <ul>
+                <li><strong>핵심 로직:</strong> 컨트롤러 속도($v$)와 각도에 따른 공의 궤적 계산, 낙하지점 표시 가이드.</li>
+                <li><strong>재미 요소:</strong> 연속 3번 성공 시 '파이어 샷' 발동, AI의 다양한 마구(슬라이스, 로브).</li>
+            </ul>
+
+            <h3>2.3 미니게임: 매직 볼링 (Magic Bowling) <span class="badge bg-blue">Arcade</span></h3>
+            <p><strong>컨셉:</strong> 레인 위에 장애물이 나타나는 판타지 볼링.</p>
+            <ul>
+                <li><strong>핵심 로직:</strong> 트리거 릴리즈 시점의 벡터값 전달, 손목 비틀기에 따른 스핀(Curve) 적용.</li>
+                <li><strong>재미 요소:</strong> 움직이는 장애물/구멍, 스트라이크 시 핀 폭발 연출.</li>
+            </ul>
+
+            <h3>2.4 미니게임: 네온 검술 (Neon Chambara) <span class="badge bg-green">Battle</span></h3>
+            <p><strong>컨셉:</strong> 상대의 공격을 막고 빈틈을 노려 밀어내는 1:1 대결.</p>
+            <ul>
+                <li><strong>핵심 로직:</strong> 검 충돌 시 햅틱 피드백, 3방향(가로/세로/대각선) 가드 시스템.</li>
+                <li><strong>재미 요소:</strong> 링 아웃 승리 조건, 방어 성공 게이지를 모아 '회오리 베기' 필살기 사용.</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>3. 사용자 경험 및 인터페이스 (UX/UI)</h2>
+            <h3>UX (User Experience)</h3>
+            <ul>
+                <li><strong>직관성:</strong> 복잡한 버튼 입력 대신 실제 스포츠와 유사한 동작(제스처) 위주 설계.</li>
+                <li><strong>피드백:</strong> 시각(이펙트), 청각(타격음), 촉각(햅틱)의 3박자를 통한 타격감 극대화.</li>
+                <li><strong>안전:</strong> 플레이 공간 이탈 시 경고 그리드 표시 (Guardian System 연동).</li>
+            </ul>
+            <h3>UI (User Interface)</h3>
+            <ul>
+                <li><strong>Diegetic UI:</strong> 체력바, 점수판 등을 게임 내 오브젝트(전광판, 손목 시계 등)로 배치하여 몰입감 유지.</li>
+                <li><strong>상호작용:</strong> 레이저 포인터 방식의 메뉴 선택 및 물리적 버튼 누르기 지원.</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>4. 아트 및 사운드 방향성 (Art & Sound Direction)</h2>
+            <h3>Art Style</h3>
+            <ul>
+                <li><strong>컨셉:</strong> 'Nintendo Switch Sports'의 화사함 + 'Beat Saber'의 네온 무드.</li>
+                <li><strong>색감:</strong> 채도 높은 원색과 발광(Emission) 텍스처를 사용하여 시인성 확보.</li>
+                <li><strong>이펙트:</strong> 타격 시 만화적인 스파크, 궤적(Trail) 효과 강조.</li>
+            </ul>
+            <h3>Sound Design</h3>
+            <ul>
+                <li><strong>SFX:</strong> 타격 강도에 비례하는 사운드 볼륨 및 피치 변화.</li>
+                <li><strong>BGM:</strong> 경기 상황(매치 포인트, 피버 타임)에 따라 템포가 빨라지는 인터랙티브 뮤직.</li>
+                <li><strong>Spatial Audio:</strong> 공의 위치, 관중의 함성 등을 3D 공간 음향으로 구현.</li>
+            </ul>
+        </div>
+
+        <div class="doc-section">
+            <h2>5. 데이터 구조 및 저장 (Data Structure & Storage)</h2>
+            <ul>
+                <li><strong>저장 방식:</strong> 로컬 JSON 파일 저장 (암호화 적용).</li>
+                <li><strong>플레이어 데이터:</strong> <code>PlayerID, Nickname, AvatarSettings</code></li>
+                <li><strong>게임 데이터:</strong>
+                    <ul>
+                        <li><code>Tennis_BestScore, Tennis_MatchesPlayed</code></li>
+                        <li><code>Bowling_BestScore, Bowling_Strikes</code></li>
+                        <li><code>Chambara_Wins, Chambara_Rank</code></li>
+                    </ul>
+                </li>
+                <li><strong>설정 값:</strong> 전체 볼륨, SFX 볼륨, 왼손/오른손 모드, 멀미 방지 옵션(Vignette On/Off).</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 VR Super Sports Champion. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,296 @@
+/* c:\Users\vr\Documents\GitHub\VRproject\기나쥬\style.css */
+
+/* CSS Reset & Basic Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Fredoka', 'Noto Sans KR', sans-serif, 'Arial';
+    background-color: #f4f9ff;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ff4757;
+    letter-spacing: -1px;
+}
+nav a {
+    color: #57606f;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #2ed573;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 107, 129, 0.9), rgba(83, 82, 237, 0.8)), url('https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 0 20px;
+}
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    font-weight: 900;
+}
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    font-weight: 500;
+}
+.btn {
+    padding: 18px 50px;
+    background-color: #ffa502;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 165, 2, 0.4);
+}
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #ff7f50;
+}
+
+/* Common Section Styles */
+section {
+    padding: 80px 20px;
+}
+.section-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #2f3542;
+    font-weight: 800;
+}
+
+/* Game Sections (New Layout) */
+.game-section {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+    gap: 0;
+    min-height: 600px;
+}
+
+/* 짝수 번째 섹션은 좌우 반전 (이미지 오른쪽, 텍스트 왼쪽) */
+.game-section:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #ffffff;
+}
+.game-section:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.game-visual {
+    flex: 1;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    position: relative;
+}
+.game-visual:hover img {
+    transform: scale(1.05);
+}
+
+.game-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* 중앙 정렬 */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.game-text {
+    flex: 1.2;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.sub-title {
+    display: block;
+    font-size: 1.2rem;
+    color: #636e72;
+    font-weight: 600;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.game-desc {
+    font-size: 1.2rem;
+    color: #636e72;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+.game-features {
+    list-style: none;
+}
+.game-features li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
+
+/* Specific Colors per Game */
+.tennis-section .game-text {
+    background: linear-gradient(135deg, #ff9f43, #ff6b6b);
+    color: white;
+}
+.tennis-section .game-title, .tennis-section .game-desc, .tennis-section .sub-title { color: white; }
+.tennis-section .sub-title { opacity: 0.8; }
+
+.bowling-section .game-text {
+    background: linear-gradient(135deg, #5f27cd, #a29bfe);
+    color: white;
+}
+.bowling-section .game-title, .bowling-section .game-desc, .bowling-section .sub-title { color: white; }
+.bowling-section .sub-title { opacity: 0.8; }
+
+.chambara-section .game-text {
+    background: linear-gradient(135deg, #00d2d3, #54a0ff);
+    color: white;
+}
+.chambara-section .game-title, .chambara-section .game-desc, .chambara-section .sub-title { color: white; }
+.chambara-section .sub-title { opacity: 0.8; }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .game-section {
+        flex-direction: column !important;
+        padding: 0;
+        gap: 0;
+        text-align: center;
+    }
+    .game-visual {
+        width: 100%;
+        height: 300px;
+    }
+    .game-text {
+        padding: 40px 20px;
+    }
+    .game-features {
+        text-align: left;
+    }
+}
+
+/* How to Play Section */
+.how-to-play {
+    background-color: #f4f9ff;
+    text-align: center;
+}
+.steps-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.step-item {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.step-item h3 {
+    color: #2f3542;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* Reviews Section */
+.reviews {
+    background-color: #ffffff;
+}
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.review-card {
+    background-color: #f1f2f6;
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    position: relative;
+}
+.review-text {
+    font-size: 1.1rem;
+    color: #2f3542;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.review-author {
+    font-weight: bold;
+    color: #57606f;
+    text-align: right;
+}
+
+/* Footer */
+footer {
+    background-color: #2f3542;
+    padding: 50px 20px;
+    text-align: center;
+    color: #fff;
+}
+.footer-links {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+.footer-links a {
+    color: #a4b0be;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer-links a:hover {
+    color: white;
+}
