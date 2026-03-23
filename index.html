@@ -152,24 +152,76 @@
 
     <!-- 리뷰 섹션 추가 -->
     <section class="reviews">
-      <h2 class="section-title">유저들의 생생 후기</h2>
+      <h2 class="section-title">김민준의 페르소나</h2>
       <div class="review-container">
-        <div class="review-card">
-          <p class="review-text">
-            "테니스 치다가 라켓에 불붙을 때 타격감이 미쳤어요! 친구들이랑 땀
-            흘리며 놀기 딱 좋습니다."
-          </p>
-          <p class="review-author">- 김민준 님 (22세, 대학생)</p>
-        </div>
-        <div class="review-card">
-          <p class="review-text">
-            "검술 게임에서 친구를 링 밖으로 밀어낼 때 쾌감이 장난 아니에요.
-            회오리 베기 최고! 직장 스트레스 전부 날려버렸어요!"
-          </p>
-          <p class="review-author">- 이영희 님 (26세, 직장인)</p>
+        <div class="review-card" style="width: 100%; max-width: 800px; margin: 0 auto; padding: 40px; text-align: center;">
+          <p style="margin-bottom: 20px; font-size: 1.1em; font-weight: bold; color: #555;">👇 이미지를 클릭하여 페르소나확인하기 👇</p>
+          <img src="VR Super Sports/asset/김민준.png" alt="김민준 프로필" onclick="document.getElementById('reviewModal').style.display='flex'" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" title="후기 보기" />
         </div>
       </div>
     </section>
+
+    <!-- 후기 모달 창 (기본 숨김) -->
+    <div id="reviewModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); align-items: center; justify-content: center;">
+      <div style="background-color: #fff; padding: 40px; border-radius: 12px; max-width: 650px; width: 90%; max-height: 85vh; overflow-y: auto; text-align: center; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+        <span onclick="document.getElementById('reviewModal').style.display='none'" style="position: absolute; top: 15px; right: 20px; font-size: 28px; font-weight: bold; cursor: pointer; color: #aaa;">&times;</span>
+        <img src="VR Super Sports/asset/김민준.png" alt="김민준 프로필" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 20px;" />
+        
+        <div style="text-align: left; font-size: 0.95em; color: #333; line-height: 1.6;">
+          <h3 style="text-align: center; color: #0056b3; margin-bottom: 10px; font-size: 1.3em;">페르소나: 김민준</h3>
+          <p style="text-align: center; font-weight: bold; background-color: #f4f6f9; padding: 10px; border-radius: 8px; margin-bottom: 20px; color: #555;">
+            "친구들과 짧고 직관적으로 즐길 수 있는 스포츠 대전 게임을 선호하는 22세 대학생"
+          </p>
+
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">👤 기본 정보</h4>
+          <ul style="list-style: none; padding: 0; margin: 10px 0;">
+            <li><strong>나이/성별:</strong> 22세 / 남성</li>
+            <li><strong>직업:</strong> 대학생</li>
+            <li><strong>거주지:</strong> 서울 노원구 (부모님과 함께 거주)</li>
+          </ul>
+
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">🌍 현재 환경</h4>
+          <ul style="padding-left: 20px; margin: 10px 0;">
+            <li>학교 수업과 과제로 바쁜 편이라 게임을 오래 하지는 못함</li>
+            <li>주로 평일 저녁이나 주말에 짧게 게임을 즐김</li>
+            <li>친구들과 함께 할 수 있는 게임을 선호함</li>
+            <li>스포츠를 전문적으로 하진 않지만, 가볍게 체험하고 즐기는 것은 좋아함</li>
+          </ul>
+
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">🎮 게임 이용 성향 및 선호도</h4>
+          <ul style="padding-left: 20px; margin: 10px 0;">
+            <li>복잡한 게임보다 쉽고 빠르게 시작할 수 있는 게임을 좋아함</li>
+            <li>혼자 하는 게임보다 친구들과 함께 즐기는 멀티플레이 게임을 선호함</li>
+            <li>짧은 경기 안에서 경쟁과 재미를 느낄 수 있는 구조를 좋아함</li>
+            <li><strong>선호 장르:</strong> 스포츠 게임, 파티 게임, 캐주얼 대전 게임</li>
+            <li><strong>선호 방식:</strong> 로컬 멀티플레이, 짧은 경기 반복 플레이</li>
+          </ul>
+
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">👍 선호 요소 vs 👎 불편함</h4>
+          <ul style="padding-left: 20px; margin: 10px 0;">
+            <li><strong>선호 요소:</strong> 쉬운 조작, 짧고 빠른 경기 진행, 친구와 함께하는 대전 플레이, 스포츠 느낌이 잘 살아있는 플레이, 종목마다 다른 손맛과 개성</li>
+            <li><strong>불편함:</strong> 복잡한 조작과 긴 튜토리얼, 반복적이고 단조로운 플레이, 스포츠 느낌이 약한 게임, 판정이 애매하거나 억울한 상황이 많은 구조</li>
+          </ul>
+
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">🎯 게임 목표</h4>
+          <ul style="padding-left: 20px; margin: 10px 0;">
+            <li>친구들과 함께 테니스, 볼링, 검술을 쉽고 재미있게 즐기고 싶어 함</li>
+            <li>짧은 시간 안에 경쟁, 성취감, 몰입감을 느끼고 싶어 함</li>
+            <li>어렵지 않은 조작으로도 스포츠 특유의 손맛을 경험하고 싶어 함</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 모달 바깥 배경 영역 클릭 시 닫기 기능
+      window.addEventListener('click', function(event) {
+        var modal = document.getElementById('reviewModal');
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
 
     <footer>
       <p>&copy; 2026 VR Super Sports Champion. All rights reserved.</p>
