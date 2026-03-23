@@ -157,6 +157,8 @@
         <div class="review-card" style="width: 100%; max-width: 800px; margin: 0 auto; padding: 40px; text-align: center;">
           <p style="margin-bottom: 20px; font-size: 1.1em; font-weight: bold; color: #555;">👇 이미지를 클릭하여 페르소나확인하기 👇</p>
           <img src="VR Super Sports/asset/김민준.png" alt="김민준 프로필" onclick="document.getElementById('reviewModal').style.display='flex'" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" title="후기 보기" />
+          <!-- 5W1H 모달 열기 버튼 추가 -->
+          <button onclick="document.getElementById('w1hModal').style.display='flex'" style="margin-top: 25px; padding: 12px 24px; font-size: 1em; font-weight: bold; color: #fff; background-color: #007BFF; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">5W1H 분석 보기</button>
         </div>
       </div>
     </section>
@@ -213,12 +215,64 @@
       </div>
     </div>
 
+    <!-- 5W1H 모달 창 추가 (기본 숨김) -->
+    <div id="w1hModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); align-items: center; justify-content: center;">
+      <div style="background-color: #fff; padding: 40px; border-radius: 12px; max-width: 650px; width: 90%; max-height: 85vh; overflow-y: auto; text-align: center; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+        <span onclick="document.getElementById('w1hModal').style.display='none'" style="position: absolute; top: 15px; right: 20px; font-size: 28px; font-weight: bold; cursor: pointer; color: #aaa;">&times;</span>
+        
+        <div style="text-align: left; font-size: 0.95em; color: #333; line-height: 1.6;">
+          <h3 style="text-align: center; color: #007BFF; margin-bottom: 20px; font-size: 1.4em;">김민준 페르소나 5W1H 분석</h3>
+          
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">👤 누가 (Who)</h4>
+          <ul style="padding-left: 20px; margin: 10px 0;">
+            <li><strong>김민준 (22세 / 남성)</strong></li>
+            <li>서울 노원구에 부모님과 함께 거주 중인 <strong>대학생</strong>입니다.</li>
+            <li>학교 수업과 과제로 바빠 게임을 길게 할 시간적 여유가 부족합니다.</li>
+          </ul>
+
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">⏰ 언제 (When)</h4>
+          <ul style="padding-left: 20px; margin: 10px 0;">
+            <li>주로 <strong>평일 저녁이나 주말</strong>에 짧은 여가 시간이 생겼을 때입니다.</li>
+            <li>장시간이 아닌, <strong>짧은 시간</strong> 동안 짬을 내어 즐깁니다.</li>
+          </ul>
+
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">📍 어디서 (Where)</h4>
+          <ul style="padding-left: 20px; margin: 10px 0;">
+            <li>집이나 친구들과 함께 모이는 오프라인 공간입니다. (온라인 플레이보다는 친구들과 대면해서 즐기는 <strong>로컬 멀티플레이 환경</strong>을 선호)</li>
+          </ul>
+
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">🎮 무엇을 (What)</h4>
+          <ul style="padding-left: 20px; margin: 10px 0;">
+            <li>테니스, 볼링, 검술 등 직관적이고 가벼운 <strong>VR 스포츠 대전 게임(파티 게임)</strong>을 원합니다.</li>
+            <li>튜토리얼이 길거나 복잡한 게임보다는 <strong>쉽고 빠르게 시작할 수 있는 게임</strong>을 찾습니다.</li>
+          </ul>
+
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">💡 어떻게 (How)</h4>
+          <ul style="padding-left: 20px; margin: 10px 0;">
+            <li>복잡한 조작 없이 직관적이고 <strong>쉬운 조작</strong>으로 게임을 플레이합니다.</li>
+            <li>종목마다 다른 스포츠 특유의 손맛을 느끼면서, 친구들과 <strong>짧은 경기를 반복하며 대전하는 방식</strong>으로 즐깁니다.</li>
+          </ul>
+
+          <h4 style="border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 15px; color: #222;">🤔 왜 (Why)</h4>
+          <ul style="padding-left: 20px; margin: 10px 0;">
+            <li>친한 친구들과 함께 어울리며 <strong>짧은 시간 안에 경쟁, 성취감, 몰입감</strong>을 느끼고 싶기 때문입니다.</li>
+            <li>바쁜 일상 속에서 스트레스를 풀며, 전문적이지 않더라도 가볍게 스포츠의 재미를 체험하기 위해서입니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <script>
       // 모달 바깥 배경 영역 클릭 시 닫기 기능
       window.addEventListener('click', function(event) {
-        var modal = document.getElementById('reviewModal');
-        if (event.target == modal) {
-          modal.style.display = "none";
+        var reviewModal = document.getElementById('reviewModal');
+        var w1hModal = document.getElementById('w1hModal');
+        
+        if (event.target == reviewModal) {
+          reviewModal.style.display = "none";
+        }
+        if (event.target == w1hModal) {
+          w1hModal.style.display = "none";
         }
       });
     </script>
